@@ -14,7 +14,7 @@ public class GoogleSearchTest extends BaseTest {
         MainPage mainPage = new MainPage(driver);
         ResultPage resultPage = new ResultPage(driver);
 
-        String queryString = "query";
+        String queryString = "Portnov";
 
         mainPage.open();
         mainPage.typeRequestInSearchInput(queryString);
@@ -23,7 +23,7 @@ public class GoogleSearchTest extends BaseTest {
         resultPage.printOutAmountOfResult();
 
         String actualPageTitle = resultPage.getPageTitle();
-        String expectedPageTitle = "1234qwer";
+        String expectedPageTitle = "Portnov - Google Search";
 
         Assert.assertEquals(actualPageTitle, expectedPageTitle);
     }
